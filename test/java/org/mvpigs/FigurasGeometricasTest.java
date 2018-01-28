@@ -1,7 +1,6 @@
 package org.mvpigs;
 
 import java.awt.Rectangle;
-import java.beans.Transient;
 
 import org.junit.Test;
 import org.mvpigs.*;
@@ -13,15 +12,17 @@ public class FigurasGeometricasTest{
     public void objetosInstanciados(){
         Circulo circulo = new Circulo("Circulo", 2.3);
         Rectangulo rectangulo = new Rectangulo(4.0,3.0);
+        Cuadrado cuadrado = new Cuadrado("Cuadrado", 4.0);
+        Elipse elipse = new Elipse("Elipse", 2.0, 3.0);
 
-        FigurasGeometricas[] listaFiguras = new FigurasGeometricas[]{circulo, rectangulo};
+        FigurasGeometricas[] listaFiguras = new FigurasGeometricas[]{circulo, rectangulo, cuadrado, elipse};
         
         for (FigurasGeometricas figura : listaFiguras){
             System.out.println(" El area de: " + figura.getNombre() + " = " + figura.area());
         }
 
     }
-    
+
     @Test
     public void listaFigurasTest(){
         FigurasGeometricas[] listaFiguras = new FigurasGeometricas[6];
